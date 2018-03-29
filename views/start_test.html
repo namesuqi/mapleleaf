@@ -1,0 +1,66 @@
+<% include header.html %>
+    <%- include("./main-body-header.html") %>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">启动测试</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-outline btn-default", onclick="createWs()">点击开始测试</button>
+                    <hr>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Test output pannel
+                        </div>
+                        <div class="panel-body">
+                            <pre id="msg", style="height: 480px;overflow:auto">null</pre>
+                        </div>
+                        <div class="panel-footer">
+                                yunshang test
+                            <a id="test-report", class="btn btn-block btn-social btn-bitbucket", style="display: none;", href="/surefire-reports/index.html", target="_blank">
+                                <i class="fa fa-link"></i> 点击查看测试报告
+                            </a>
+                        </div>
+                    </div>
+                    <a id="test-report", class="btn btn-block btn-social btn-bitbucket", style="display: none;">
+                        <i class="fa fa-link"></i> 点击查看测试报告
+                    </a>
+                </div>
+                
+            </div>
+            <!-- /.row -->
+        </div>
+        <script type="text/javascript">
+            function createWs() {
+                var ws = new WebSocket('ws://localhost:8000/starttest');
+
+                var pre_element=document.getElementById("msg");
+                var a_element=document.getElementById("test-report");
+
+                ws.onopen = function (event) {
+                    ws.send("start WebSockets!");
+                };
+
+                ws.onmessage = function(event) {
+                    console.log(event.data);
+                    pre_element.innerHTML = event.data;
+                };
+
+                ws.onerror = function(event){
+                    ws.close();
+                };
+
+                ws.onclose = function (event) {
+                    console.log('onclose!');
+                    a_element.style.display="";
+                };
+            }
+        </script>
+
+        <!-- /#page-wrapper -->
+    <%- include("./main-body-tail.html") %>
+<% include footer.html %>

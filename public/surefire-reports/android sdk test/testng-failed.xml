@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [android sdk test]" parallel="tests">
+  <test thread-count="2" verbose="0" name="test device 1(failed)" parallel="tests">
+    <parameter name="device" value="kaiboer-0032"/>
+    <classes>
+      <class name="com.yunshang.InitTest">
+        <methods>
+          <include name="beforeMethodTestInit"/>
+          <include name="afterMethodTestInit"/>
+          <include name="beforeClassTestInit"/>
+          <include name="testRepeatStartWithoutMemoryLeak"/>
+          <include name="afterClassTestInit"/>
+        </methods>
+      </class> <!-- com.yunshang.InitTest -->
+    </classes>
+  </test> <!-- test device 1(failed) -->
+</suite> <!-- Failed suite [android sdk test] -->

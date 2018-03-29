@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="android sdk test" duration-ms="14462" started-at="2018-03-09T09:14:01Z" finished-at="2018-03-09T09:14:15Z">
+    <groups>
+      <group name="init">
+        <method signature="InitTest.testFirstStart()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="testFirstStart" class="com.yunshang.InitTest"/>
+      </group> <!-- init -->
+      <group name="directory">
+        <method signature="InitTest.testFirstStart()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="testFirstStart" class="com.yunshang.InitTest"/>
+      </group> <!-- directory -->
+    </groups>
+    <test name="test device 1" duration-ms="14462" started-at="2018-03-09T09:14:01Z" finished-at="2018-03-09T09:14:15Z">
+      <class name="com.yunshang.InitTest">
+        <test-method status="PASS" signature="beforeClassTestInit(java.lang.String)[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="beforeClassTestInit" is-config="true" duration-ms="9720" started-at="2018-03-09T09:14:01Z" finished-at="2018-03-09T09:14:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kaiboer-0032]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassTestInit -->
+        <test-method status="PASS" signature="beforeMethodTestInit()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="beforeMethodTestInit" is-config="true" duration-ms="276" depends-on-groups="init" started-at="2018-03-09T09:14:10Z" finished-at="2018-03-09T09:14:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodTestInit -->
+        <test-method status="PASS" signature="testFirstStart()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="testFirstStart" duration-ms="2679" started-at="2018-03-09T09:14:11Z" finished-at="2018-03-09T09:14:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFirstStart -->
+        <test-method status="PASS" signature="afterMethodTestInit()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="afterMethodTestInit" is-config="true" duration-ms="929" depends-on-groups="init" started-at="2018-03-09T09:14:13Z" finished-at="2018-03-09T09:14:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodTestInit -->
+        <test-method status="PASS" signature="afterClassTestInit()[pri:0, instance:com.yunshang.InitTest@6cc4c815]" name="afterClassTestInit" is-config="true" duration-ms="848" started-at="2018-03-09T09:14:14Z" finished-at="2018-03-09T09:14:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassTestInit -->
+      </class> <!-- com.yunshang.InitTest -->
+    </test> <!-- test device 1 -->
+  </suite> <!-- android sdk test -->
+</testng-results>
